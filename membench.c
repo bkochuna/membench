@@ -55,7 +55,7 @@ void main()
 		sec -= sample_sec;
 		ns -= sample_ns;
 	    } while (tsteps < steps);
-	    printf("Size: %7d Stride: %7d read+write: %14.0f ns\n",
+	    printf("Size: %7d Stride: %7d read+write: %14.2f ns\n",
 		   csize*sizeof(int),
 		   stride*sizeof(int), 
 		   (double) (sec*1000000000.0)/(steps*SAMPLE*stride*((limit-1.0)/stride+1.0)));
