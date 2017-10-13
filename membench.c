@@ -17,7 +17,7 @@
 
 int x[CACHE_MAX];
 
-void main()
+int main()
 {
     int register i, index, stride, limit, temp;
     double sample_ns, sample_sec, sec, ns;
@@ -62,7 +62,7 @@ void main()
 	}
 	printf ("\n");
     }
-    exit (0);
+     return 0;
 }
 
 //////////////////////////////////////////////////////////////////////
