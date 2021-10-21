@@ -41,6 +41,9 @@ for i in range(9,27):
   plt.plot(mbdata[istt:istt+i,1],mbdata[istt:istt+i,2],
     label="L="+sizeof_fmt(mbdata[istt,0]))
   istt=istt+i+1
+  if istt >= len(mbdata):
+     break
+
 
 plt.legend(bbox_to_anchor=(1.04,0.5),loc='center left')
 plt.subplots_adjust(right=0.7,bottom=0.15)
