@@ -12,6 +12,9 @@ CFLAGS := -O0
 
 default: $(PROG).png
 
+# $(PROG).png: $(PROG).gp $(PROG).out
+#	gnuplot membench.gp < membench.out > test.png
+
 $(PROG).png: $(PROG).py $(PROG).out
 	python $(PROG).py
 
