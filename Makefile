@@ -5,15 +5,14 @@
 PROG := membench
 
 CC := cc
-# CFLAGS := -fast -xO4 -xdepend -xarch=v8plusa -xchip=ultra -xCC
 CFLAGS := -O0
 
 .PHONY: default clean
 
 default: $(PROG).png
 
-# $(PROG).png: $(PROG).gp $(PROG).out
-#	gnuplot membench.gp < membench.out > test.png
+$(PROG)_gp.png: $(PROG).gp $(PROG).out
+	gnuplot membench.gp < membench.out > membench_gp.png
 
 $(PROG).png: $(PROG).py $(PROG).out
 	python $(PROG).py
