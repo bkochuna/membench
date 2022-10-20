@@ -13,7 +13,7 @@ mbdata = np.genfromtxt("membench.out",usecols=(1,3,5))
 
 plt.ylabel("Time (nsec)")
 plt.xlabel("Stride (bytes)")
-plt.xscale("log",basex=2)
+plt.xscale("log",base=2)
 plt.ylim(0,np.ceil(max(mbdata[:,2]))+1)
 xtvals=np.concatenate([np.power(4,range(1,11)), np.power(2,range(21,29))])
 xtlabels=["4B",
